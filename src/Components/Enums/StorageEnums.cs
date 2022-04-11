@@ -15,4 +15,18 @@ namespace MinionProcesses.Components.Enums
         Usb,
         Scsi
     }
+
+    public enum StorageFileFormat
+    {
+        Raw,
+        Qcow,
+        Qcow2,
+        Qed,
+        Luks,
+        Vdi,
+        Vmdk,
+        Vpc,
+        Vhdx
+
+    }
 }

@@ -39,19 +39,5 @@ namespace MinionProcesses.Components.Interfaces
 
         #endregion
 
-        #region Methods
-
-        void Create();
-
-        void Delete(bool deleteStorage);
-
-        void Clone(bool cloneStorage);
-
-        void Start();
-
-        void Stop();
-
-        #endregion
-
     }
 }

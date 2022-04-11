@@ -32,30 +32,5 @@ namespace MinionProcesses.Components
         public List<IUsbDevice>? UsbDevices { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime? LastUsedAt { get; set; }
-
-        public void Clone(bool cloneStorage)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Create()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Delete(bool deleteStorage)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Start()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Stop()
-        {
-            throw new NotImplementedException();
-        }
     }
 }
