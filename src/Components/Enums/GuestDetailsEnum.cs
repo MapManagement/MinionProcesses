@@ -15,4 +15,11 @@ namespace MinionProcesses.Components.Enums
         Q35,
         i440FX
     }
+
+    public enum GuestAccelerator
+    {
+        Kvm,
+        Xen,
+        Tcg
+    }
 }

@@ -8,6 +8,7 @@ namespace MinionProcesses.Components
         public GuestHypervisor Hypervisor { get; set; }
         public GuestArchitecture Architecture { get; set; }
         public GuestChipset Chipset { get; set; }
+        public GuestAccelerator Accelerator { get; set; }
         public string? EmulatorPath { get; set; }
         public string? FirmwarePath { get; set; }
     }

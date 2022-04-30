@@ -12,8 +12,8 @@ namespace MinionProcesses.Components.Interfaces
 
         float Size { get; set; }
 
-        bool Readonly { get; set; }
+        bool IsReadonly { get; set; }
 
-        bool Shareable { get; set; }
+        bool IsShareable { get; set; }
     }   
 }
