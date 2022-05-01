@@ -10,6 +10,8 @@ namespace MinionProcesses.Components.Interfaces
 
         GuestChipset Chipset { get; set; }
 
+        GuestAccelerator Accelerator { get; set; }
+
         string? EmulatorPath { get; set; }
 
         string? FirmwarePath { get; set; }
