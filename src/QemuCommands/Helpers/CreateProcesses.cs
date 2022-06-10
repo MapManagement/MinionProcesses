@@ -58,7 +58,7 @@ namespace MinionProcesses.QemuCommands.Helpers
 
             foreach(var drive in guest.StorageDevices)
             {
-                string guestDrive = BuildDriveOption(drive); //TODO: boot order?
+                string guestDrive = BuildDriveOption(drive);
                 guestCommand.Append(guestDrive);
             }
 
@@ -129,21 +129,20 @@ namespace MinionProcesses.QemuCommands.Helpers
             return new StringBuilder(smpFlag).Append(smpOption).ToString();
         }
 
-        private static string BuildDriveOption(IStorage drive, int? bootindex = null)
+        private static string BuildDriveOption(IStorage drive)
         {
             string filePath = drive.Path;
             string busType = drive.BusType.ToString(); //TODO: convert enum
             string mediaType = drive.Type.ToString(); //TODO: convert enum
-            bool isReadonly = drive.IsReadonly; //TODO: check readonly option
 
             string driveFlag = "-drive ";
-            string driveOption = $"file={filePath}, if={busType}, media={mediaType}, readonly={isReadonly}";
+            string driveOption = $"file={filePath}, if={busType}, media={mediaType}";
 
             StringBuilder newDrive = new StringBuilder(driveFlag).Append(driveOption);
 
-            if(bootindex != null)
+            if(drive.BootOrder != null)
             {
-                newDrive.Append($", bootindex={bootindex}");
+                newDrive.Append($", bootindex={drive.BootOrder}");
             }
 
             return newDrive.ToString();

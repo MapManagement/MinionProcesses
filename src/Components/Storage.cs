@@ -14,11 +14,22 @@ namespace MinionProcesses.Components
             IsShareable = isShareable;
         }
 
+        public Storage(string path, StorageType type, StorageBusType busType, bool isReadonly, bool isShareable, int bootOrder)
+        {
+            Path = path;
+            Type = type;
+            BusType = busType;
+            IsReadonly = isReadonly;
+            IsShareable = isShareable;
+            BootOrder = bootOrder;
+        }
+
         public string Path { get; set; }
         public StorageType Type { get; set; }
         public StorageBusType BusType { get; set; }
         public float Size { get; set; }
         public bool IsReadonly { get; set; }
         public bool IsShareable { get; set; }
+        public int? BootOrder { get; set; }
     }
 }

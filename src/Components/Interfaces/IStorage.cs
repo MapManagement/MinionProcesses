@@ -15,5 +15,7 @@ namespace MinionProcesses.Components.Interfaces
         bool IsReadonly { get; set; }
 
         bool IsShareable { get; set; }
+
+        int? BootOrder { get; set; }
     }   
 }
